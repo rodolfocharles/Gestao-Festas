@@ -19,7 +19,7 @@
 			<form class="form-inline" method="POST" th:object="${convidado}" th:action="@{/convidados}" style="margin: 20px 0">
 				<div class="form-group">
 					<input type="text" class="form-control" placeholder="Nome" th:field="*{nome}"/>
-					<input type="text" class="form-control"	placeholder="Acompanhantes" th:field="*{quantidadeAcompanhantes}"/>
+					<input type="text" class="form-control"	placeholder="Acompanhantes" th:field="*{acompanhantes}"/>
 					<button type="submit" class="btn btn-primary">Adicionar</button>
 				</div>
 			</form>
@@ -33,7 +33,7 @@
 				<tbody>
 					<tr th:each="convidado : ${convidados}">
 						<td th:text="${convidado.nome}"></td>
-						<td th:text="${convidado.quantidadeAcompanhantes}"></td>
+						<td th:text="${convidado.acompanhantes}"></td>
 					</tr>
 				</tbody>
 			</table>
